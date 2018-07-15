@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        {% for i in data %}
+            <li>
+                <a href="{{ i.href }}">
+                    <h4>标题：{{ i.title }}</h4>
+                    <img src="{{ i.picture }}" alt="">
+                    来源:{{ i.of }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav class="pull-right">
+        <ul class="pagination">
+           {{ page_html|safe }}
+        </ul>
+    </nav>
+
+
+
+
+</body>
+</html>
